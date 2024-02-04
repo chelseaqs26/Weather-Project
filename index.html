@@ -15,24 +15,34 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a City" required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a City"
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>New York</h1>
-          <p>
-            Tuesday 19:32, Cloudy
-            <br />
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">New York</h1>
+            <p class="weather-app-details">
+              Tuesday 19:32, Cloudy
+              <br />
 
-            Humidity: 77%, Wind: 7mph
-          </p>
+              Humidity: <strong>77%</strong>, Wind: <strong> 7mph</strong>
+            </p>
+          </div>
+          <div class="weather-app-info-container">
+            <div class="weather-app-icon">☁️</div>
+            <div class="weather-app-temp">36</div>
+            <div class="weather-app-unit">°F</div>
+          </div>
         </div>
-        <div>☁️ 36°F</div>
       </main>
-
       <footer>
         Coded by
         <a href="https://github.com/chelseaqs26" target="_blank">
