@@ -7,9 +7,9 @@ function updateWeatherData(response) {
   let speedElement = document.querySelector("#speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-  let icon = document.querySelector("#icon");
+  let iconElement = document.querySelector("#icon");
 
-  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   timeElement.innerHTML = formatDate(date);
   speedElement.innerHTML = `${response.data.wind.speed}mph`;
@@ -41,7 +41,7 @@ function formatDate(date) {
 
 function searchCity(city) {
   let apiKey = "ee21f04bf3f2ad6e420ef9to7c4ad1a4";
-  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiURL).then(updateWeatherData);
 }
 
