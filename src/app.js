@@ -26,7 +26,7 @@ function formatDate(date) {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednesay",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
@@ -55,3 +55,31 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit);
 
 searchCity("New York");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+            <div class="weather-forecast-date">${day}</div>
+
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+              width="80px"
+            />
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-max"> 18°</span>
+              <span class="weather-forecast-min"> 12°</span>
+            </div>
+          </div>
+        </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();

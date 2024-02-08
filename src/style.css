@@ -88,9 +88,7 @@ main {
 }
 
 .weather-forecast {
-  margin-top: 10px;
-  text-align: center;
-  color: black;
+  display: flex;
 }
 
 .weather-forecast-date {
