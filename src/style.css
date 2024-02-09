@@ -83,12 +83,14 @@ main {
   margin-top: 22px;
 }
 .weather-app-unit {
-  margin-top: 18px;
+  margin-top: 30px;
   font-size: 28px;
 }
 
 .weather-forecast {
   display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .weather-forecast-date {
