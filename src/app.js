@@ -17,6 +17,8 @@ function updateWeatherData(response) {
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -91,5 +93,3 @@ function getForecast(city) {
   let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
   axios(apiURL).then(displayForecast);
 }
-
-getForecast(response.data.city);
